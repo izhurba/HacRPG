@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>HacRPG</title>
+		<link rel="stylesheet" type="text/css" href="css/main-style.css">
+	</head>
+
+	<body>
+	<script>
+		function dam(){
+		return Math.floor(Math.random() * 100);
+		}
+		
+		function heal() {
+			return Math.floor(Math.random() * 10)
+	</script>
+
+		<p id="damage"></p>
+	</body>
+	<footer>
+		<p id="health"></p>
+		<button id="attack" type="button" onclick="document.getElementById('damage').innerHTML=dam()">Attack</button>
+		<button id="defend" type="button">Defend</button>
+	</footer>
+</html>
