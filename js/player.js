@@ -1,14 +1,24 @@
 class Player {
-	constructor(name, level, strength, intelligence, agility, stamina,  mana, job) {
+	constructor(name, job) {
 		this.name = name;
-		this.level = level;
-		this.strength = strength;
-		this.intelligence = intelligence;
-		this.agility = agility;
-		this.stamina = stamina;
-		this.mana = mana;
+		this.level = 1;
+		this.health = 50;
+		this.strength = 10;
+		this.intelligence = 10;
+		this.agility = 5;
+		this.stamina = 20;
+		this.mana = 20;
+		this.physicalDefense = 10;
+		this.magicalDefense = 10;
 		this.hack= 0;
 		this.job = job;
+		this.leftWeapon;
+		this.rightWeapon;
+		this.rightRing;
+		this.leftRing;
+		this.head;
+		this.body;
+		this.legs;
 	}
 
 }
@@ -16,47 +26,52 @@ class Player {
 class Job {
 	constructor(name) {			
 	
-		this.name = name;
-		var strY;
-		var intY;
-		var agiY;
-		var stamY;
-		var manaY;
-	
 		switch(name) {
 		
 			case 'Warrior':
 				name = "Warrior";
-				strY = 1.3;
-				intY = 0.75;
-				agiY = 1.05;
-				stamY = 1.1;
-				manaY = 0.8;
+				this.strY = 1.4;
+				this.intY = 0.8;
+				this.agiY = 1.1;
+				this.hpY = 1.25;
+				this.stamY = 1.15;
+				this.manaY = 0.8;
+				this.physDefY = 1.1;
+				this.magDefY = 0.9;
 				break;
 
 			case 'Mage':
 				name = "Mage";
-				strY = 0.75;
-				intY = 1.3;
-				agiY = 0.95;
-				stamY = 0.9;
-				manaY = 1.1;
+				this.strY = 0.75;
+				this.intY = 1.5;
+				this.agiY = 0.95;
+				this.hpY = 1;
+				this.stamY = 0.95;
+				this.manaY = 1.3;
+				this.physDefY = 0.9;
+				this.magDefY = 1.2;
 				break;
 			case 'Ranger':
 				name = "Ranger";
-				strY = 1.1;
-				intY = 0.7;
-				agiY = 1.3;
-				stamY = 1.2;
-				manaY = 0.7;
+				this.strY = 1.1;
+				this.intY = 0.8;
+				this.agiY = 1.3;
+				this.hpY = 1.1;
+				this.stamY = 1.3;
+				this.manaY = 0.8;
+				this.physDefY  = 1;
+				this.magDefY = 1;
 				break;
 			default:
 				name = "Beginner";
-				strY = 1;
-				intY = 1;
-				agiY = 1;
-				stamY = 1;
-				manaY = 1;
+				this.strY = 1;
+				this.intY = 1;
+				this.agiY = 1;
+				this.hpY = 1;
+				this.stamY = 1;
+				this.manaY = 1;
+				this.physDefY = 1;
+				this.magDefY = 1;
 
 		}
 	}
