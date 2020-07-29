@@ -21,17 +21,89 @@ button	{
 	background-color:gray;
 }
 
+#startButton {
+	border:none;
+	background:transparent;
+	left:-50%;
+	transform:translate(50%);
+}
+
+#startButton:hover {
+	background-color:red;
+}
+
+
 footer {
 	text-align:center;
 	position:fixed;
 	bottom:25px;
 	width:100%;
+	display: block;
 }
 
-#damage {
-	font-size:40px;
-	color:red;
-	width:100%;
-	text-align:center;
+#mainScreen {
+	display: none;
 }
+#startScreen {
+	display: block;
+}
+
+.playerCreation input {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.war {
+  background-image: url(https://place-hold.it/100x300&text=warrior);
+}
+
+.rang {
+  background-image: url(https://place-hold.it/100x300&text=ranger);
+}
+
+.mage {
+  background-image: url(https://place-hold.it/100x300&text=mage);
+}
+
+.playerCreation input:active+.char {
+  opacity: .9;
+}
+
+.playerCreation input:checked+.char {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+
+.playerCreation {
+  position:absolute;
+  left:50%;
+  top:40%;
+  transform:translate(-50%,-40%);
+}
+
+.char {
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width:100px;
+  height: 300px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+  -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+  filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+.char:hover {
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
 

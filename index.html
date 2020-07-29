@@ -2,23 +2,36 @@
 	<head>
 		<title>HacRPG</title>
 		<link rel="stylesheet" type="text/css" href="css/main-style.css">
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/"></script>
 	</head>
 
 	<body>
-	<script>
-		function dam(){
-		return Math.floor(Math.random() * 100);
-		}
-	
-		//function heal() {
-			//return Math.floor(Math.random() * 10)
-	</script>
+	<div id="startScreen">
+		<div class="playerCreation">
+		<form id="pCForm">
+			<label for="pName">Player Name:</label>
+			<input type="text" id="pName" name="pName">
+			<br>
+			<br>
+			<input id="warrior"  type="radio" name="playerClass" value="warrior">
+			<label class="char war" for="warrior"></label>
+			<input id="ranger" type="radio" name="playerClass" value="ranger">
+			<label class="char rang" for="ranger"></label>
+			<input id="mage" type="radio" name="playerClass" value="mage">
+			<label class="char mage" for="mage"></label>
+			<br>
+		</form>
+		<button type="button" id="startButton" onclick="startGame()">Start Game</button>
+		</div>
+	</div>
 
-		<p id="damage">ye</p>
+	<div id="msinScreen">
 	</body>
-	<footer>
+	<footer id="mainScreen">
 		<p id="health"></p>
 		<button id="attack" type="button" onclick="document.getElementById('damage').innerHTML=dam()">Attack</button>
 		<button id="defend" type="button">Defend</button>
 	</footer>
+	</div>
 </html>
