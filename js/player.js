@@ -2,12 +2,15 @@ class Player {
 	constructor(name, job) {
 		this.name = name;
 		this.level = 1;
-		this.health = 50;
+		this.currentHealth = 50;
+		this.maxHealth = 50;
 		this.strength = 10;
 		this.intelligence = 10;
 		this.agility = 5;
-		this.stamina = 20;
-		this.mana = 20;
+		this.currentStamina = 20;
+		this.maxStamina = 20;
+		this.currentMana = 20;
+		this.maxMana = 20;
 		this.physicalDefense = 10;
 		this.magicalDefense = 10;
 		this.hack= 0;

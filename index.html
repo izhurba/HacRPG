@@ -2,8 +2,9 @@
 	<head>
 		<title>HacRPG</title>
 		<link rel="stylesheet" type="text/css" href="css/main-style.css">
+		<script type="text/javascript" src="js/player.js"></script>
+
 		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/"></script>
 	</head>
 
 	<body>
@@ -26,12 +27,20 @@
 		</div>
 	</div>
 
-	<div id="msinScreen">
+	<div id="mainScreen">
+
+
+
 	</body>
-	<footer id="mainScreen">
-		<p id="health"></p>
+	<footer id="statsFooter">
+		<div class="playerInfo">
+		<label class="playerName" id="playerName" for="playerHealth"></label>
+		<meter class="healthBar" id="playerHealth" value="100"></meter>
+		<br>
 		<button id="attack" type="button" onclick="document.getElementById('damage').innerHTML=dam()">Attack</button>
 		<button id="defend" type="button">Defend</button>
+		</div>
 	</footer>
+		
 	</div>
 </html>
