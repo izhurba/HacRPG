@@ -27,4 +27,8 @@ function updateHealth() {
 	health.value = 100 * (player.maxHealth / player.currentHealth);
 }
 
+function nextLevel(level) {
+	return math.floor(1000 * (level ^ 1.2));
+}
+
 

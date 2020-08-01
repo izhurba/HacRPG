@@ -2,6 +2,8 @@ class Player {
 	constructor(name, job) {
 		this.name = name;
 		this.level = 1;
+		this.exp = 0;
+		this.nextLevelExp = 1000;
 		this.currentHealth = 50;
 		this.maxHealth = 50;
 		this.strength = 10;
