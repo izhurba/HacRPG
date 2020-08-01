@@ -27,8 +27,17 @@ function updateHealth() {
 	health.value = 100 * (player.maxHealth / player.currentHealth);
 }
 
-function nextLevel(level) {
-	return math.floor(1000 * (level ^ 1.2));
+function addExp(character, exp) {
+	character.exp += exp;
+	if (character.exp >= character.nextLevelExp) {
+		levelUp(character);
+	}
 }
 
+function levelUp(character) {
+	
+	character.strength = (
 
+	character.nextLevelExp = math.floor(1000 * (character.level^ 1.2));
+	}
+}
