@@ -45,10 +45,13 @@ function levelUp(character) {
 	character.physicalDefense += Math.floor(((character.job.physDefY) * character.physicalDefense) - character.physicalDefense);
 	character.magicalDefense += Math.floor(((character.job.magDefY) * character.magicalDefense) - character.magicalDefense);
 	
-	if (character.level % mod 10 == 0) {
+	if (character.level % 10 == 0) {
 		character.hack += 1;
 	}
 
 	character.nextLevelExp = math.floor(1000 * (character.level^ 1.2));
-	}
 }
+
+
+
+

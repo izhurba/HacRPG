@@ -1,6 +1,7 @@
 class Enemy {
-	constructor(name, level) {
+	constructor(name, level, type) {
 		this.name = name;
+		this.type = type;
 		this.level = level;
 		this.health = 50;
 		this.strength = 10;

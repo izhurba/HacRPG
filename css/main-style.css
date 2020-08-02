@@ -106,4 +106,16 @@ footer {
   filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
 
+#enemyPic {
+  position:absolute;
+  right:40%;
+  top:15%;
+  transform:translate(40%,-15%);
+}
 
+#playerPic {
+  position:absolute;
+  left:40%;
+  top:60%;
+  transform:translate(-40%,-60%);
+}
