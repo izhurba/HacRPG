@@ -7,9 +7,7 @@ function startGame() {
  	x.style.display = "none";
 	var y = document.getElementById("mainScreen");
 	y.style.display = "block";
-	var f = document.getElementById("statsFooter");
-	f.style.display = "block";
-	
+
 	var pClass = document.getElementsByName("playerClass");
 	for(i = 0; i < pClass.length; i++) {
 		if(pClass[i].checked) {
@@ -20,7 +18,27 @@ function startGame() {
 	var health = document.getElementById("playerHealth");
 	health.value = 100 * (player.maxHealth / player.currentHealth);
 	var name = document.getElementById("playerName").innerHTML = player.name;
+	
+	drawCanvas();
+
 }
+
+function drawCanvas() {
+	var canvas = document.getElementById("mapCanvas");
+	var ctx = canvas.getContext("2d");
+	//canvas.width = window.innerWidth - 200;
+	//canvas.height= window.innerHeight - 200;
+	canvas.width = window.innerWidth - 250;
+	canvas.height= window.innerHeight- 200;
+	ctx.fillStyle = "#777777";
+	ctx.fillRect(0,0, canvas.width, canvas.height);
+}
+
+function redraw() {
+	//Redraw canvas on events
+}
+
+
 
 function updateHealth() {
 	var health = document.getElementById("health");

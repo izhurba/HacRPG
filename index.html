@@ -30,7 +30,10 @@
 	<div id="mainScreen">
 		
 
-		<div id="battleScreen">
+		<canvas id="mapCanvas" style="border:1px solid"></canvas>
+
+
+		<div class="battleScreen" id="battleScreen">
 			<div id="enemy">
 				<img id="enemyPic" src="https://place-hold.it/100x300&text=enemy">
 			</div>
@@ -38,19 +41,22 @@
 			<div id="player">
 				<img id="playerPic" src="https://place-hold.it/100x300&text=player">
 			</div>
+		</div>
 	</body>
 	<footer id="statsFooter">
-		<div class="playerIdleInfo">
-		
-		</div>
-		
-		<div class="playerBattleInfo">
+
+		<div class="battleScreen" id="playerBattleInfo">
 			<label class="playerName" id="playerName" for="playerHealth"></label>
 			<meter class="healthBar" id="playerHealth" value="100"></meter>
 			<br>
 			<button id="attack" type="button" onclick="document.getElementById('damage').innerHTML=dam()">Attack</button>
 			<button id="defend" type="button">Defend</button>
 		</div>
+		
+		<div id="playerIdleInfo">
+			<p> Display non-battle stuff here</p>		
+		</div>
+		
 	</footer>
 		
 	</div>
