@@ -1,18 +1,21 @@
 var player;
 var job;
 var enemy;
-var canvas;
-var ctx;
-var deltaX = 0;
-var deltaY = 0;
-var img = new Image();
-
 
 function startGame() {
-	var x = document.getElementById("startScreen");
- 	x.style.display = "none";
-	var y = document.getElementById("mainScreen");
-	y.style.display = "block";
+	var i;
+	
+	var x = document.getElementsByClassName("startScreen");
+ 	
+ 	for (i = 0; i < x.length; i++) {
+ 		x[i].style.display = "none";
+ 	}
+
+	var y = document.getElementsByClassName("mainScreen");
+ 	
+ 	for (i = 0; i < y.length; i++) {
+ 		y[i].style.display = "block";
+ 	}
 
 	var pClass = document.getElementsByName("playerClass");
 	for(i = 0; i < pClass.length; i++) {
@@ -24,14 +27,12 @@ function startGame() {
 	var health = document.getElementById("playerHealth");
 	health.value = 100 * (player.maxHealth / player.currentHealth);
 	var name = document.getElementById("playerName").innerHTML = player.name;
-
-	img.src = "img/player.png"
 	
 
 }
 
 
-window.addEventListener("mousedown", function(evt) {
+window.addEventListener("click", function(evt) {
 		characterMove(evt);
 }, false)
 

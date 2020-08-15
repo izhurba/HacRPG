@@ -8,11 +8,11 @@
 	</head>
 
 	<body>
-	<div id="startScreen">
+	<div class="startScreen">
 		<div class="playerCreation">
 		<form id="pCForm">
 			<label for="pName">Player Name:</label>
-			<input type="text" id="pName" name="pName">
+			<input type="text" id="pName" name="pName" maxlength="20" title="Max length is 20 letters">
 			<br>
 			<br>
 			<input id="warrior"  type="radio" name="playerClass" value="warrior">
@@ -27,13 +27,12 @@
 		</div>
 	</div>
 
-	<div id="mainScreen">
+	<div class="mainScreen">
 		
 
-		<canvas id="mapCanvas" style="border:1px solid"></canvas>
 
 
-		<div class="battleScreen" id="battleScreen">
+		<div class="battleScreen">
 			<div id="enemy">
 				<img id="enemyPic" src="https://place-hold.it/100x300&text=enemy">
 			</div>
@@ -43,7 +42,7 @@
 			</div>
 		</div>
 	</body>
-	<footer id="statsFooter">
+	<footer class="mainScreen" id="statsFooter">
 
 		<div class="battleScreen" id="playerBattleInfo">
 			<label class="playerName" id="playerName" for="playerHealth"></label>
@@ -53,7 +52,7 @@
 			<button id="defend" type="button">Defend</button>
 		</div>
 		
-		<div id="playerIdleInfo">
+		<div class="idleScreen" id="playerIdleInfo">
 			<p id="p1"> Display non-battle stuff here</p>
 			<p id="p2"> More stuff </p>		
 		</div>
