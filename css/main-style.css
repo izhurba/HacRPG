@@ -5,6 +5,7 @@ html, body {
 	height:100%;
 	margin: 0px;
   background: lightgray;
+  overflow: hidden;
 	
 }
 
@@ -20,7 +21,8 @@ button	{
 
 
 footer {
-  text-align:center;
+  vertical-align: middle;
+  display: inline-block;
   position:fixed;
   bottom:25px;
   width:80%;
@@ -68,6 +70,10 @@ footer {
 	background-color: darkgray;
 }
 
+#startBattle {
+  left: -50%;
+}
+
 .mainScreen {
 	display: none;
 }
@@ -81,8 +87,23 @@ footer {
 }
 
 #playerIdleInfo {
-  display: block;
-  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#bgMap {
+  width: 150%;
+  height: 150%;
+  position: relative;
+  overflow: visible;
+}
+
+#map {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin-left: -1500px;
+  margin-top: -1700px;
 }
 
 /*Class specific*/

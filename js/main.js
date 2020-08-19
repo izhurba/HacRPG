@@ -27,10 +27,10 @@ function startGame() {
 	var health = document.getElementById("playerHealth");
 	health.value = 100 * (player.maxHealth / player.currentHealth);
 	var name = document.getElementById("playerName").innerHTML = player.name;
-	
 
 }
 
+/*
 
 window.addEventListener("click", function(evt) {
 		characterMove(evt);
@@ -43,12 +43,21 @@ function characterMove(event) {
 	y = event.clientY;
 	
 }
+*/
 
 
 function updateHealth() {
 	var health = document.getElementById("health");
 	health.value = 100 * (player.maxHealth / player.currentHealth);
 }
+
+
+function startBattle(battleArea, player) {
+	enemy = new Enemy(enemyName, enemyLevel, enemyType);
+
+}
+
+
 
 function addExp(character, exp) {
 	character.exp += exp;
