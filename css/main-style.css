@@ -22,7 +22,7 @@ button	{
 
 footer {
   vertical-align: middle;
-  display: inline-block;
+  display: none;
   position:fixed;
   bottom:25px;
   width:80%;

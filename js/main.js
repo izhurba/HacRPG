@@ -1,6 +1,7 @@
 var player;
 var job;
 var enemy;
+var battleArea = "forest";
 
 function startGame() {
 	var i;
@@ -17,6 +18,9 @@ function startGame() {
  		y[i].style.display = "block";
  	}
 
+ 	var f = document.getElementById("statsFooter");
+ 	f.style.display = "inline-block";
+
 	var pClass = document.getElementsByName("playerClass");
 	for(i = 0; i < pClass.length; i++) {
 		if(pClass[i].checked) {
@@ -30,21 +34,6 @@ function startGame() {
 
 }
 
-/*
-
-window.addEventListener("click", function(evt) {
-		characterMove(evt);
-}, false)
-
-
-
-function characterMove(event) {
-	x = event.clientX;
-	y = event.clientY;
-	
-}
-*/
-
 
 function updateHealth() {
 	var health = document.getElementById("health");
@@ -53,10 +42,33 @@ function updateHealth() {
 
 
 function startBattle(battleArea, player) {
-	enemy = new Enemy(enemyName, enemyLevel, enemyType);
+
+	var y = document.getElementsByClassName("mainScreen");	
+ 	for (i = 0; i < y.length; i++) {
+ 		y[i].style.display = "none";
+ 	}
+
+ 	var x = document.getElementsByClassName("battleScreen");
+ 	for (i = 0; i < x.length; i++) {
+ 		x[i].style.display = "block";
+ 	}
+
+	//enemy = new Enemy(enemyName, enemyLevel, enemyType);
 
 }
 
+function endBattle() {
+	var y = document.getElementsByClassName("mainScreen");	
+ 	for (i = 0; i < y.length; i++) {
+ 		y[i].style.display = "block";
+ 	}
+
+ 	var x = document.getElementsByClassName("battleScreen");
+ 	for (i = 0; i < x.length; i++) {
+ 		x[i].style.display = "none";
+ 	}
+
+}
 
 
 function addExp(character, exp) {

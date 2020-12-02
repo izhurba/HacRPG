@@ -31,9 +31,9 @@
 		<div id="bgMap">
 			<img id="map" src="img/HacRPG_Map.svg">
 		</div>
+	</div>
 
-
-		<div class="battleScreen">
+	<div class="battleScreen">
 			<div id="enemy">
 				<img id="enemyPic" src="https://place-hold.it/100x300&text=enemy">
 			</div>
@@ -41,9 +41,10 @@
 			<div id="player">
 				<img id="playerPic" src="https://place-hold.it/100x300&text=player">
 			</div>
-		</div>
+	</div>
+
 	</body>
-	<footer class="mainScreen" id="statsFooter">
+	<footer id="statsFooter">
 
 		<div class="battleScreen" id="playerBattleInfo">
 			<label class="playerName" id="playerName" for="playerHealth"></label>
@@ -51,15 +52,14 @@
 			<br>
 			<button id="attack" type="button" onclick="document.getElementById('damage').innerHTML=dam()">Attack</button>
 			<button id="defend" type="button">Defend</button>
+			<button id="endBattle" type="button" onclick="endBattle()">End Battle</button>
 		</div>
 		
-		<div class="idleScreen" id="playerIdleInfo">
+		<div class="mainScreen" id="playerIdleInfo">
 			<button id="startBattle" type="button" onclick="startBattle()">Battle</button> 
 			<p id="p1"> Display non-battle stuff here</p>
 			<p id="p2"> More stuff </p>		
 		</div>
 		
 	</footer>
-		
-	</div>
 </html>
