@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>HacRPG</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/main-style.css">
 		<script type="text/javascript" src="js/player.js"></script>
 
@@ -28,6 +29,22 @@
 	</div>
 
 	<div class="mainScreen">
+		<ul class="menuButtons" >
+				<a class="mainMenu">
+					<i class="menuParentIcon" onclick="toggleMenu(this)" menuOpen="false">Main</i>
+				</a>
+		
+			<ul>
+				<li><a class="menuButtons ch" id="mapButton"><i class="mapIcon" menuOpen="false">Map</i></a></li>
+				<li><a class="menuButtons ch" id="idleButton"><i class="idleIcon" menuOpen="false">Idle</i></a></li>
+				<li><a class="menuButtons ch" id="characterButton"><i class="charIcon" menuOpen="false">Character</i></a></li>
+				<li><a class="menuButtons ch" id="settingsButton"><i class="settingsIcon" menuOpen="false">Settings</i></a></li>
+			</ul>
+
+		</ul>
+	</div>
+
+	<div class="mapScreen">
 		<div id="bgMap">
 			<img id="map" src="img/HacRPG_Map.svg">
 		</div>
@@ -50,13 +67,9 @@
 			<label class="playerName" id="playerName" for="playerHealth"></label>
 			<meter class="healthBar" id="playerHealth" value="100"></meter>
 			<br>
-			<button id="attack" type="button" onclick="document.getElementById('damage').innerHTML=dam()">Attack</button>
-			<button id="defend" type="button">Defend</button>
-			<button id="endBattle" type="button" onclick="endBattle()">End Battle</button>
 		</div>
 		
-		<div class="mainScreen" id="playerIdleInfo">
-			<button id="startBattle" type="button" onclick="startBattle()">Battle</button> 
+		<div class="mainScreen" id="playerIdleInfo"> 
 			<p id="p1"> Display non-battle stuff here</p>
 			<p id="p2"> More stuff </p>		
 		</div>

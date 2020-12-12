@@ -60,18 +60,14 @@ footer {
 }
 
 #startButton {
-	border:none;
-	background:transparent;
+	border:2px black;
+	background-color: :lightgray;
 	left:-50%;
 	transform:translate(50%);
 }
 
 #startButton:hover {
 	background-color: darkgray;
-}
-
-#startBattle {
-  left: -50%;
 }
 
 .mainScreen {
@@ -83,6 +79,10 @@ footer {
 }
 
 .battleScreen {
+  display: none;
+}
+
+.mapScreen {
   display: none;
 }
 
@@ -154,6 +154,12 @@ footer {
   filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
 
+
+/*Menu buttons*/
+
+.menuButtons.ch {
+  display: none;
+}
 
 
 /*Pictures*/

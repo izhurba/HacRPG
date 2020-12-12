@@ -1,7 +1,11 @@
-var player;
-var job;
-var enemy;
-var battleArea = "forest";
+var player,
+	job,
+	enemy,
+	battleArea = "forest";
+
+var menuOpen;
+var mainButton;
+
 
 function startGame() {
 	var i;
@@ -34,6 +38,13 @@ function startGame() {
 
 }
 
+function toggleMenu (target) {
+	//alert(target.getAttribute('menuOpen'));
+	target.setAttribute('menuOpen', (target.getAttribute('menuOpen') ? false : true));
+	//alert(target.getAttribute('menuOpen'));
+	
+	alert(false ? false : true);
+}
 
 function updateHealth() {
 	var health = document.getElementById("health");
