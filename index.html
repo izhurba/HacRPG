@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>HacRPG</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/main-style.css">
 		<script type="text/javascript" src="js/player.js"></script>
 
@@ -29,16 +29,16 @@
 	</div>
 
 	<div class="mainScreen">
-		<ul class="menuButtons" >
+		<ul class="menuButtons mainButton" onclick="toggleMenu(this)">
 				<a class="mainMenu">
-					<i class="menuParentIcon" onclick="toggleMenu(this)" menuOpen="false">Main</i>
+					<i class="menuParentIcon"  menuOpen="false">Main</i>
 				</a>
 		
-			<ul>
-				<li><a class="menuButtons ch" id="mapButton"><i class="mapIcon" menuOpen="false">Map</i></a></li>
-				<li><a class="menuButtons ch" id="idleButton"><i class="idleIcon" menuOpen="false">Idle</i></a></li>
-				<li><a class="menuButtons ch" id="characterButton"><i class="charIcon" menuOpen="false">Character</i></a></li>
-				<li><a class="menuButtons ch" id="settingsButton"><i class="settingsIcon" menuOpen="false">Settings</i></a></li>
+			<ul class="menuButtons ch">
+				<li><a class="menuButtons ch" id="mapButton"><i class="mapIcon">Map</i></a></li>
+				<li><a class="menuButtons ch" id="idleButton"><i class="idleIcon">Idle</i></a></li>
+				<li><a class="menuButtons ch" id="characterButton"><i class="charIcon">Character</i></a></li>
+				<li><a class="menuButtons ch" id="settingsButton"><i class="settingsIcon">Settings</i></a></li>
 			</ul>
 
 		</ul>

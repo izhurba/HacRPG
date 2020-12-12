@@ -157,8 +157,28 @@ footer {
 
 /*Menu buttons*/
 
+.menuButtons {
+  list-style-type: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  padding: 25px;
+}
+
 .menuButtons.ch {
   display: none;
+  bottom: 50%;
+  background-color: #314963;
+}
+
+.mainMenu {
+  background-color: #314963;
+  bottom: 50px;
 }
 
 

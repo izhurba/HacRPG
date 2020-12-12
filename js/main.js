@@ -40,10 +40,19 @@ function startGame() {
 
 function toggleMenu (target) {
 	//alert(target.getAttribute('menuOpen'));
+	var c = document.getElementsByClassName("ch");
 	target.setAttribute('menuOpen', (target.getAttribute('menuOpen') ? false : true));
-	//alert(target.getAttribute('menuOpen'));
-	
-	alert(false ? false : true);
+	if (target.getAttribute('menuOpen') && (c[0].style.display === "none")) {
+		for(i = 0; i < c.length; i++) {
+			c[i].style.display = "block";
+		}
+	}
+	else {
+		for(i = 0; i < c.length; i++) {
+			c[i].style.display = "none";
+		}	
+	}
+
 }
 
 function updateHealth() {
